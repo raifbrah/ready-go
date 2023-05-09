@@ -1,29 +1,31 @@
-const start = document.querySelector(".start")
-const stop = document.querySelector(".stop")
+const btn = document.querySelector(".btn")
 
 let toggle = false
-const myArray = [3000, 5000, 7000]
+const myArray = [3, 4, 5, 6, 7]
 const audio = new Audio('./ReadyGo.m4a');
 
-start.onclick = () => {
-  toggle = true
-  audio.play()
-  readyGo()
-}
-
-stop.onclick = () => {
-  toggle = false
+btn.onclick = () => {
+  if (toggle === false) {
+    btn.innerHTML = 'stop'
+    btn.classList.add('btn_stop')
+    toggle = true
+    audio.play()
+    readyGo()
+  } else {
+    btn.innerHTML = 'start'
+    btn.classList.remove('btn_stop')
+    toggle = false
+  }
 }
 
 function readyGo(arrow) {
   const randTime = randomArrayElement(myArray)
-    
+
   if (toggle === true) {
     setTimeout(() => {
-      console.log(randTime)
       audio.play()
       readyGo()
-    }, randTime)
+    }, randTime * 1000)
   }
 }
 

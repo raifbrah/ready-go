@@ -1,7 +1,29 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-size: 18px;
+  font-family: sans-serif;
 }
 
-.title {
-    color: red;
+.btn {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  color: #fff;
+  background: green;
+  font-size: min(100px, 20vw);
+}
+
+.btn_stop {
+  color: #fff;
+  background: red;
 }
