@@ -7,6 +7,7 @@ const audio = new Audio('./ReadyGo.m4a');
 
 start.onclick = () => {
   toggle = true
+  audio.play()
   readyGo()
 }
 
