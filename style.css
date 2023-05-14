@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 body {
+  background-color: #fff;
   font-size: 18px;
   font-family: sans-serif;
 }
@@ -22,7 +23,22 @@ body {
   background: green;
   font-size: min(100px, 20vw);
 }
+.btn::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  
+  background: inherit;
+}
 
 .btn_stop {
   background: red;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000;
+  }
 }
